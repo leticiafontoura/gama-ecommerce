@@ -4,6 +4,10 @@ This is a project developed for the Hiring Coders course.
 
 The goal is to create a landing page for an e-commerce sale, black friday style, with a form for users to put their e-mails and then we store them in our localstorage.
 
+# Live website
+
+You can check the result in (https://vinilcolablackfriday.netlify.app/)[https://vinilcolablackfriday.netlify.app/]
+
 # Technologies
 
 - React
