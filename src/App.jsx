@@ -40,7 +40,8 @@ function App() {
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
 
-  function handleForm() {
+  function handleForm(e) {
+    e.preventDefault();
     let userName = document.querySelector("#name").value;
     localStorage.setItem("userName", userName);
     let userEmail = document.querySelector("#email").value;
