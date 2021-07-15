@@ -47,6 +47,8 @@ function App() {
     let userEmail = document.querySelector("#email").value;
     localStorage.setItem("userEmail", userEmail);
     alert("e-mail cadastrado com sucesso");
+    setUserName("");
+    setUserEmail("");
   }
 
   return (
