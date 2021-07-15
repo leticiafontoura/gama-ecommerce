@@ -4,7 +4,7 @@ This is a project developed for the Hiring Coders course.
 
 The goal is to create a landing page for an e-commerce sale, black friday style, with a form for users to put their e-mails and then we store them in our localstorage.
 
-Images are from google and (Free Pik)[https://br.freepik.com/vetores/bandeira]
+Images are from google and [Free Pik](https://br.freepik.com/vetores/bandeira)
 
 # Live website
 
