@@ -3,7 +3,8 @@ import lpImage from "./lp.jpeg";
 import gdImage from "./gd.jpeg";
 import swImage from "./sw.jpg";
 import Card from "./Cards";
-import iconLogo from "./bg.svg"
+import iconLogo from "./bg.svg";
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 let countDownDate = new Date("Jul 30, 2021 23:18:00").getTime();
 
@@ -55,9 +56,9 @@ function App() {
         
         <div id="form" onSubmit={handleForm}>
           <div className="formInfo">
-          <div id="countdown"> {countdown} </div>
+          <div id="countdown">Faltam {countdown} </div>
             <h2>Até <span className="discount">70%</span> de desconto em todos os itens</h2>
-            <img src={iconLogo} />
+            <img src={iconLogo} alt="desenho de um vinil em chamas com cores neon"/>
           </div>
           <div className="formInput">
             <form>
@@ -94,14 +95,14 @@ function App() {
         <h1>Alerta de spoiler:</h1>
         <div className="cardsContainer">
           
-          <Card produto="Linkin Park - A Thousand Suns" src={lpImage} desconto="40% OFF" precoAntigo="259,00" precoAtual="156,00"/>
-          <Card produto="Steven Wilson - The Future Bites" src={swImage} desconto="60% OFF" precoAntigo="300,00" precoAtual="180,00"/>
-          <Card produto="Green Day - American Idiot" src={gdImage} desconto="70% OFF" precoAntigo="150,00" precoAtual="100,00"/>
+          <Card produto="Linkin Park - A Thousand Suns" alt="vinil do álbum A Thousand Suns da banda Linkin Park" src={lpImage} desconto="40% OFF" precoAntigo="259,00" precoAtual="156,00"/>
+          <Card produto="Steven Wilson - The Future Bites" alt="vinil do álbum The Future Bites do cantor Steven Wilson" src={swImage} desconto="60% OFF" precoAntigo="300,00" precoAtual="120,00"/>
+          <Card produto="Green Day - American Idiot" alt="vinil do álbum American Idiot da banda Green Day" src={gdImage} desconto="70% OFF" precoAntigo="150,00" precoAtual="45,00"/>
         </div>
       </section>
 
       <footer>
-        Vinílcola 2021, todos os direitos reservados. Desenvolvido por Letícia Fontoura.
+      <p>© 2021 Vinílcola, todos os direitos reservados. Desenvolvido por <a target="_blank" href="https://github.com/leticiafontoura">Letícia Fontoura <GitHubIcon style={{verticalAlign: "sub"}}/></a></p>
       </footer>
       
     </>

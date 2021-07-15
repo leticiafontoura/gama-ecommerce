@@ -6,7 +6,7 @@ class Card extends React.Component {
         return (
             <div className="cardItem">
                 <div className="imageContainer">
-                    <img src={this.props.src}/>
+                    <img src={this.props.src} alt={this.props.alt}/>
                 </div>
                 <div className="body" >
                     <p className="productTitle"><strong>{this.props.produto}</strong></p>
