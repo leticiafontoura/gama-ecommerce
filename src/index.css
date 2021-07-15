@@ -82,9 +82,7 @@ body {
 }
 
 .formInfo img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  width: 300px;
 }
 
 .formInput {
@@ -116,6 +114,7 @@ body {
   font-family: 'Dosis', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
+  border-radius: 0;
 }
 
 #name::placeholder, #email::placeholder {
@@ -233,7 +232,7 @@ footer {
   }
   
   .formInfo img {
-    object-fit: contain;
+    width: 250px;
   }
 
   .cardItem {
