@@ -6,7 +6,7 @@ The goal is to create a landing page for an e-commerce sale, black friday style,
 
 # Live website
 
-You can check the result in (https://vinilcolablackfriday.netlify.app/)[https://vinilcolablackfriday.netlify.app/]
+You can check the result in https://vinilcolablackfriday.netlify.app/
 
 # Technologies
 
