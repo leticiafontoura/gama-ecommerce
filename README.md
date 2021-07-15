@@ -1,3 +1,21 @@
+# Overview
+
+This is a project developed for the Hiring Coders course.
+
+The goal is to create a landing page for an e-commerce sale, black friday style, with a form for users to put their e-mails and then we store them in our localstorage.
+
+# Technologies
+
+- React
+- HTML
+- CSS
+- Material UI
+
+# Instructions
+
+To start this project, clone it and run the command `npm i`. Go nuts!
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -10,10 +10,11 @@ class Card extends React.Component {
                 </div>
                 <div className="body" >
                     <p className="productTitle"><strong>{this.props.produto}</strong></p>
-                    <p>{this.props.descricao}</p>
                     <p className="discount">{this.props.desconto}</p>
                     <p>De R${this.props.precoAntigo}</p>
                     <h3>Por R${this.props.precoAtual}</h3>
+
+                    <p>{this.props.descricao}</p>
                 </div>
                 
             </div>
