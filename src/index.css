@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@100;300;400;500;600;700;800;900&family=Dosis:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
   url("./tijolo1.svg");
@@ -28,13 +32,22 @@ body {
 #logo {
   font-family: 'Big Shoulders Inline Display', cursive;
   font-weight: 900;
-  text-shadow: 0 0 25px #fb0202;
+  text-shadow:
+    0 0 7px rgba(237, 138, 10, 1),
+    0 0 10px rgba(237, 138, 10, 1),
+    0 0 21px rgba(237, 138, 10, 1),
+    0 0 42px #fb0202,
+    0 0 82px #fb0202,
+    0 0 92px #fb0202,
+    0 0 102px #fb0202,
+    0 0 151px #fb0202;
   margin-bottom: 20px;
   font-size: 5rem;
+  color: rgba(0, 0, 0, 0.7)
 }
 
 .formContainer {
-  margin-top: 100px;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,6 +78,41 @@ body {
   font-weight: 500;
   font-size: 4rem;
   margin: 0;
+}
+
+.formContainer h2 {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 500;
+  font-size: 4rem;
+  margin: 0;
+}
+
+#spoilerAlert {
+  margin-top: 4rem;
+  font-family: 'Big Shoulders Inline Display', cursive;
+  font-weight: 900;
+  text-shadow:
+    0 0 7px rgba(237, 138, 10, 1),
+    0 0 10px rgba(237, 138, 10, 1),
+    0 0 21px rgba(237, 138, 10, 1),
+    0 0 42px #fb0202,
+    0 0 82px #fb0202,
+    0 0 92px #fb0202,
+    0 0 102px #fb0202,
+    0 0 151px #fb0202;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.7)
+}
+
+#spoilerAlertIcon, #spoilerAlertIcon:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.formContainer svg {
+  fill: rgba(237, 138, 10, 1)
+    
 }
 
 .formInfo h2 {
@@ -173,6 +221,9 @@ body {
   font-weight: 500;
   font-family: 'Dosis', sans-serif;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .productTitle {
@@ -182,6 +233,28 @@ body {
 .cardItem:hover {
   background-color: rgb(48, 21, 81);
   color: #FFF29C;
+}
+
+.body {
+  height: 300px;
+}
+
+.cardItem:hover .body {
+  display: none;
+}
+
+.bodyDescription {
+  display: none;
+}
+
+.bodyDescription p {
+  font-size: 1.5rem
+}
+
+.cardItem:hover .bodyDescription {
+  display: block;
+  color: #FFF29C;
+  height: 300px;
 }
 
 code {
@@ -199,6 +272,10 @@ code {
   width: 100%;
   object-fit: cover;
   border-radius: 5px 5px 0 0;
+}
+
+.actualPrice {
+  font-size: 1.5rem;
 }
 
 footer {
@@ -222,8 +299,8 @@ footer a, footer a:visited, footer a:hover {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    height: auto;
-    width: 90%;
+    height: 50rem;
+    width: 50%;
   }
 
   .formInfo {
@@ -259,6 +336,13 @@ footer a, footer a:visited, footer a:hover {
 }
 
 @media (max-width: 563px) {
+  .formInfo h2, .discount, .formInput h2, #name, #email {
+    font-size: 1.5rem;
+  }
+  
+  #form {
+    width: 90%;
+  }
   .cardItem {
     width: 90%;
   }
@@ -271,7 +355,15 @@ footer a, footer a:visited, footer a:hover {
     font-size: 3rem;
   }
 
+  #blackfriday {
+    font-size: 2.5rem;
+  }
+
   #countdown {
     font-size: 2rem;
   }
+}
+
+#formMessage {
+  display: none;
 }

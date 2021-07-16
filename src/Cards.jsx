@@ -12,9 +12,12 @@ class Card extends React.Component {
                     <p className="productTitle"><strong>{this.props.produto}</strong></p>
                     <p className="discount">{this.props.desconto}</p>
                     <p>De R${this.props.precoAntigo}</p>
-                    <h3>Por R${this.props.precoAtual}</h3>
+                    <p className="actualPrice">Por R${this.props.precoAtual}</p>
 
                     <p>{this.props.descricao}</p>
+                </div>
+                <div className="bodyDescription">
+                    <p>{this.props.description}</p>
                 </div>
                 
             </div>

@@ -5,6 +5,8 @@ import swImage from "./sw.jpg";
 import Card from "./Cards";
 import iconLogo from "./bg.svg";
 import GitHubIcon from '@material-ui/icons/GitHub';
+import ArrowDownwardRoundedIcon from '@material-ui/icons/ArrowDownwardRounded';
+import Form from "./Form";
 
 let countDownDate = new Date("Jul 30, 2021 23:18:00").getTime();
 
@@ -37,70 +39,31 @@ function App() {
     setCountdown(countdownString);
   }, 1000);
 
-  const [userName, setUserName] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-
-  function handleForm(e) {
-    e.preventDefault();
-    let userName = document.querySelector("#name").value;
-    localStorage.setItem("userName", userName);
-    let userEmail = document.querySelector("#email").value;
-    localStorage.setItem("userEmail", userEmail);
-    alert("e-mail cadastrado com sucesso");
-    setUserName("");
-    setUserEmail("");
-  }
-
   return (
     <>
       <div className="formContainer">
-      <h1>Black Friday</h1>
+      <h2 id="blackfriday">Black Friday</h2>
       <h1 id="logo">v i n í l c o l a</h1>
         
-        <div id="form" onSubmit={handleForm}>
+        <section id="form">
           <div className="formInfo">
           <div id="countdown">Faltam {countdown} </div>
             <h2>Até <span className="discount">70%</span> de desconto em todos os itens</h2>
             <img src={iconLogo} alt="desenho de um vinil em chamas com cores neon"/>
           </div>
           <div className="formInput">
-            <form>
-              <h2>Cadastre-se para receber as promoções em primeira mão e ganhe mais <span className="discount">5% de desconto</span></h2>
-              <p>
-                <input
-                  required
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Nome"
-                  value={userName}
-                  onChange={(e) => setUserName(e.target.value)}
-                />
-              </p>
-              <p>
-                <input
-                  required
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="E-mail"
-                  value={userEmail}
-                  onChange={(e) => setUserEmail(e.target.value)}
-                />
-              </p>
-              <p><input type="submit" id="submit" value="Enviar" /></p>
-            </form>
+            <Form />
           </div>
-        </div>
+        </section>
+        <h2 id="spoilerAlert">Alerta de spoiler</h2>
+        <a id="spoilerAlertIcon" href="#cardsContainer"><ArrowDownwardRoundedIcon style={{fontSize: "3rem"}}/></a>
       </div>
 
       <section className="content">
-        <h1>Alerta de spoiler:</h1>
-        <div className="cardsContainer">
-          
-          <Card produto="Linkin Park - A Thousand Suns" alt="vinil do álbum A Thousand Suns da banda Linkin Park" src={lpImage} desconto="40% OFF" precoAntigo="259,00" precoAtual="156,00"/>
-          <Card produto="Steven Wilson - The Future Bites" alt="vinil do álbum The Future Bites do cantor Steven Wilson" src={swImage} desconto="60% OFF" precoAntigo="300,00" precoAtual="120,00"/>
-          <Card produto="Green Day - American Idiot" alt="vinil do álbum American Idiot da banda Green Day" src={gdImage} desconto="70% OFF" precoAntigo="150,00" precoAtual="45,00"/>
+        <div className="cardsContainer" id="cardsContainer">
+          <Card description="Disco de Vinil Novo, Importado, Lacrado, Duplo, 180 gramas" produto="Linkin Park - A Thousand Suns" alt="vinil do álbum A Thousand Suns da banda Linkin Park" src={lpImage} desconto="40% OFF" precoAntigo="259,00" precoAtual="156,00"/>
+          <Card description="Disco de Vinil Novo, Importado, Lacrado, Duplo, 180 gramas" produto="Steven Wilson - The Future Bites" alt="vinil do álbum The Future Bites do cantor Steven Wilson" src={swImage} desconto="60% OFF" precoAntigo="300,00" precoAtual="120,00"/>
+          <Card description="Disco de Vinil Novo, Importado, Lacrado, Duplo, 180 gramas" produto="Green Day - American Idiot" alt="vinil do álbum American Idiot da banda Green Day" src={gdImage} desconto="70% OFF" precoAntigo="150,00" precoAtual="45,00"/>
         </div>
       </section>
 
