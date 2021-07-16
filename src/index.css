@@ -248,7 +248,8 @@ body {
 }
 
 .bodyDescription p {
-  font-size: 1.5rem
+  font-size: 1.5rem;
+  padding: 10px;
 }
 
 .cardItem:hover .bodyDescription {
